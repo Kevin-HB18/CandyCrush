@@ -6,13 +6,24 @@ public class TableroCandy extends Candies {
     
     public void llenarTab(){
        Candies dulce = new Candies();
-       int dado; 
+       int dado=0,dado2,cont=0; 
         for(int i=0;i<9;i++){ 
-           for(int j=0;j<9;j++){
-               dado=(int) Math.floor(Math.random()*5+1);
+           for(int j=0;j<9;j++){        
+               dado2=dado;
+               dado=(int) Math.floor(Math.random()*5+1);     
+               if(dado==dado2)
+                   cont++;
+               else
+                   cont=0;
+               if(cont==2){
+                   while(dado==dado2){
+                       dado=(int) Math.floor(Math.random()*5+1);     
+                   }
+                   cont=0;
+               }                   
                switch (dado) {
                    case 1:
-                       matrix[i][j]=dulce.getHazard();
+                       matrix[i][j]=dulce.getSun();
                        break;
                    case 2:
                        matrix[i][j]=dulce.getPaz();
@@ -21,7 +32,7 @@ public class TableroCandy extends Candies {
                        matrix[i][j]=dulce.getRad();
                        break;
                    case 4:
-                       matrix[i][j]=dulce.getSkull();
+                       matrix[i][j]=dulce.getStar();
                        break;
                    default:
                        matrix[i][j]=dulce.getYinyang();
@@ -29,12 +40,16 @@ public class TableroCandy extends Candies {
                }
            }
        }
+               
     }
     public void showTab(){
         for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++)
-              System.out.print(matrix[i][j]+" ");
-            System.out.println("");
+            System.out.print("|");
+            for(int j=0;j<9;j++){
+                String value = String.format("%1s", matrix[i][j]);
+                System.out.print(" "+value+" ");
+            }              
+            System.out.println("|");
         }   
         System.out.println("");
     }

@@ -3,8 +3,8 @@ package candycrush;
 
 public class Candies {
   private String rad = "\u2622";
-  private String skull = "\u2620";   
-  private String hazard="\u2623";
+  private String star = "\u272A";   
+  private String sun="\u2742";
   private String yinyang="\u262F";
   private String paz="\u262E";
 
@@ -16,21 +16,23 @@ public class Candies {
         this.rad = rad;
     }
 
-    public String getSkull() {
-        return skull;
+    public String getStar() {
+        return star;
     }
 
-    public void setSkull(String skull) {
-        this.skull = skull;
+    public void setStar(String star) {
+        this.star = star;
+    }   
+
+    public String getSun() {
+        return sun;
     }
 
-    public String getHazard() {
-        return hazard;
+    public void setSun(String sun) {
+        this.sun = sun;
     }
 
-    public void setHazard(String hazard) {
-        this.hazard = hazard;
-    }
+  
 
     public String getYinyang() {
         return yinyang;

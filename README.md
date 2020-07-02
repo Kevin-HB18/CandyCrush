@@ -1,6 +1,6 @@
 # CandyCrush
 CandyCrush POO
-Hecho por:
+Hecho por: \n
 Kevin Holguin Bello 
 Cod. 20191020035
 Andrés Felipe Lesmes Campos
